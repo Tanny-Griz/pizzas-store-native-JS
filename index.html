@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="img/Avo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Pizza Store</title>
+  </head>
+  <body>
+    <header>
+      <div class="holder-contacts">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-lg-1 md-12 md-center sm-12 p-0 text-center">
+              <div class="logo">
+                <a href="index.html"
+                  ><img
+                    src="https://cdn3.iconfinder.com/data/icons/food-set-3/91/Food_C230-64.png"
+                    alt="icon"
+                /></a>
+              </div>
+            </div>
+            <div
+              class="col-lg-7 md-12 md-center sm-12 py-2 d-flex justify-content-center"
+            >
+              <nav class="main-nav">
+                <ul class="d-flex">
+                  <li>
+                    <a href="#"><i class="icon-location"></i> Санк-Петербург</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icon-car"></i> Доставка и оплата</a>
+                  </li>
+                  <li>
+                    <a href="tel:+380990000000"
+                      ><i class="icon-call"></i> +38099-00-00-000</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div
+              class="col-lg-4 md-12 md-center sm-12 sm-center py-2 d-flex justify-content-center"
+            >
+              <nav class="main-nav">
+                <ul>
+                  <li>
+                    <div class="div">
+                      <input
+                        class="form-control"
+                        id="inputFind"
+                        type="search"
+                        placeholder="Search"
+                      />
+                      <button class="btn my-sm-0" type="button">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="cart.html" class="basket"
+                      ><i class="icon-shopping-cart_216477"></i
+                    ></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- banner -->
+      <div  class="holder-banner">
+        <div class="container-fluid">
+          <div class="slider"></div>
+        </div>
+      </div>
+      <!-- end banner -->
+      <!-- filters -->
+      <section class="products">
+        <div class="container">
+          <div class="content">
+            <aside>
+              <div class="holder-filters">
+                <div class="row d-flex justify-content-between align-items-center">
+                  <div class="col-sm-12 col-sm-text-center">
+                    <h1>Pizza</h1>
+                  </div>
+                  <div class="col-sm-12 mb-2">
+                    <div class="row hold-filter d-flex">
+                      <div class="col-12">
+                        <select class="custom-select mb-2" id="select-filter">
+                          <option selected>Диапазон:</option>
+                          <option value="1">По Каллориям</option>
+                          <option value="2">По Цене</option>
+                        </select>
+                        <div class="inp-group">
+                          <input
+                          class="form-control"
+                          id="inputFrom"
+                          type="text"
+                          placeholder="От"/>
+                        <span> - </span>
+                        <input
+                          class="form-control"
+                          id="inputTo"
+                          type="text"
+                          placeholder="До"/>
+                        </div>
+                      </div>
+                      <div class="col-12 my-2">
+                        <button class="btn" id="btn-find">OK</button>
+                        <button class="btn" id="btn-reset">Сброс</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 mb-2">
+                    <div class="d-flex">
+                      <select class="custom-select" id="select">
+                        <option selected value="0">Сортировать:</option>
+                        <option value="1">По возрастанию цены</option>
+                        <option value="2">По убыванию цены</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 mb-2 py-2">
+                    <button class="btn create-pizza" id="create-pizza-btn">
+                      Создай свою Пиццу
+                    </button>
+                  </div>
+                  <!-- create modal -->
+                  <div class="modal-create" id="create-pizza">
+                    <div class="card" id="modal-content-create"
+                    ></div>
+                  </div>
+                  <!-- create end modal -->
+                </div>
+              </div>
+            </aside>
+            <!-- end filters -->
+            <!-- card -->
+            <div class="holder-pizzas-list">
+              <div class="hold-card"></div>
+            </div>
+          <!-- end card -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+        <div class="holder-contacts">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-sm-12 col-md-6 md-center py-4">
+                <h2>Меню доставки</h2>
+                <div class="row">
+                  <ul class="col-6">
+                    <li><a href="#">Пицца</a></li>
+                    <li><a href="#">Роллы</a></li>
+                    <li><a href="#">Наборы</a></li>
+                    <li><a href="#">Вок</a></li>
+                    <ul>
+                      <li>
+                        <a href="#"><i class="icon-Instagram"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="icon-fb"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="icon-mail"></i></a>
+                      </li>
+                    </ul>
+                  </ul>
+                  <ul class="col-6">
+                    <li><a href="#">Салаты</a></li>
+                    <li><a href="#">Супы</a></li>
+                    <li><a href="#">Десерты</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 py-4">
+                <h2>Основное</h2>
+                <ul>
+                  <li><a href="#">Акции</a></li>
+                  <li><a href="#">Доставка и оплата</a></li>
+                  <li><a href="#">Политика конфиденцияльности</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+    <!-- modal -->
+    <div class="modal">
+      <div class="modal-card" id="pizzaInfo"></div>
+    </div>
+    <!-- end modal -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="listOfPizzasAndCompozitions.js"></script>
+    <!-- <script src="cart.js"></script> -->
+    <script src="main.js"></script>
+  </body>
+</html>
